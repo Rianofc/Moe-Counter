@@ -1,5 +1,3 @@
-'use strict'
-
 const fs = require('fs')
 const config = require('config-yml')
 const express = require('express')
@@ -66,8 +64,8 @@ app.get('/heart-beat', (req, res) => {
   console.log('heart-beat')
 });
 
-const listener = app.listen(config.app.port || 3000, () => {
-  console.log('Your app is listening on port ' + listener.address().port)
+const listener = app.listen(`8080`, () => {
+  console.log('Your app is listening on port 8080')
 })
 
 let __cache_counter = {}, shouldPush = false
